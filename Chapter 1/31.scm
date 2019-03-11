@@ -1,5 +1,6 @@
 (define (now) (js-eval "Date.now()"))
-
+(define (both f a b) (and (f a) (f b)))
+(define (either f a b) (or (f a) (f b)))
 (define (== a b)
   (cond 
     ((both integer? a b)
