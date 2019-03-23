@@ -1,3 +1,7 @@
+(define (both f a b) (and (f a) (f b)))
+(define (either f a b) (or (f a) (f b)))
+(define (float? a) (and (number? a) (not (integer? a))))
+
 (define (== a b)
   (cond 
     ((both integer? a b)

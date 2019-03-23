@@ -19,7 +19,7 @@
 (define (next-divisor a)
   (if (= a 2) 3 (+ a 2)))
 
-(define (divides? a b) (= 0 (mod b a)))
+(define (divides? a b) (zero? (mod b a)))
 
 (define (find-divisor n a)
   (cond
